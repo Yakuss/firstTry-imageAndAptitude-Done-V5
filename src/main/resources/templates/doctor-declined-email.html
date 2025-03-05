@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; }
+        .header { background-color: #fc2c03; color: white; padding: 10px; text-align: center; }
+        .content { padding: 20px; border: 1px solid #ddd; }
+        .button {
+            display: inline-block; padding: 10px 20px;
+            background-color: #fc2c03; color: white;
+            text-decoration: none; border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Account Declined!</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span th:text="${name}">Doctor</span>,</p>
+        <p>We are sorry to inform you that your account has been declined by our administration team.</p>
+        <p>You can now access the platform and try again with more details:</p>
+        <p>
+            <a th:href="${loginUrl}" class="button">try to register again </a>
+        </p>
+        <p>Best regards,<br>The Medical Platform Team</p>
+    </div>
+</div>
+</body>
+</html>
